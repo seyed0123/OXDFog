@@ -9,7 +9,7 @@
    <children>
       <ImageView fitHeight="604.0" fitWidth="800.0" pickOnBounds="true">
          <image>
-            <Image url="@desert1.jpeg" />
+            <Image url="@train.jpeg" />
          </image>
       </ImageView>
       <ListView fx:id="allGamesList" layoutX="148.0" layoutY="48.0" prefHeight="200.0" prefWidth="565.0" />

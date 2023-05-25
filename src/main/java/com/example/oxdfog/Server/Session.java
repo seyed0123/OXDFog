@@ -155,7 +155,7 @@ public class Session implements Runnable{
                         out.println("game not found");
                     }else
                     {
-                       download(user.getId(),id);
+                        download(user.getId(),id);
                         File imageFile = new File("G:\\code\\java\\OXDFog\\src\\main\\java\\com\\example\\oxdfog\\Server\\Resources\\"+game.getFilePath());
                         byte[] imageData = new byte[(int) imageFile.length()];
                         FileInputStream fis = new FileInputStream(imageFile);

@@ -34,7 +34,6 @@ public class ClientApp extends Application {
             // Perform input/output operations on the SSL socket
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream(), true);
-
             // Example: Send data to the server
             /*out.println("sign up");
             out.flush();
