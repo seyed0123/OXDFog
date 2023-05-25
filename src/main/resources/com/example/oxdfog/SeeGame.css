@@ -1,0 +1,12 @@
+Button
+{
+    -fx-font-family: "Franklin Gothic Demi Cond";
+    -fx-background-color: #2d68a6;
+    -fx-border-color: black;
+}
+label
+{
+    -fx-font-family: monospace;
+    -fx-background-color: #04fff2;
+    -fx-border-color: black;
+}

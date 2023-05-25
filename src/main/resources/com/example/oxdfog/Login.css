@@ -1,0 +1,8 @@
+Button {
+    -fx-font-family: "Century Gothic";
+    -fx-background-color: "orange";
+}
+Label
+{
+    -fx-font-family: "Kristen ITC";
+}

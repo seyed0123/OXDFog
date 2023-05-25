@@ -1,0 +1,16 @@
+ListView
+{
+    -fx-font-family: Sylfaen;
+    -fx-border-color: black;
+    -fx-background-color: orange;
+}
+Label
+{
+    -fx-font-family: Vivaldi;
+    -fx-text-fill: black;
+}
+Button
+{
+    -fx-background-color: orange;
+    -fx-font-family: "Droid Sans Mono Dotted";
+}
