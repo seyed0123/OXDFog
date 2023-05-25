@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oxdfog.MainWindow">
+   <children>
+      <ImageView fitHeight="604.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@train.jpeg" />
+         </image>
+      </ImageView>
+      <ListView fx:id="allGamesList" layoutX="148.0" layoutY="48.0" prefHeight="200.0" prefWidth="565.0" />
+      <ListView fx:id="ownGamesList" layoutX="148.0" layoutY="306.0" prefHeight="200.0" prefWidth="565.0" />
+      <Label alignment="CENTER" layoutX="294.0" layoutY="4.0" prefHeight="17.0" prefWidth="219.0" text="all games">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="130.0" fitWidth="131.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@OXDFog.jpeg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="317.0" layoutY="261.0" prefHeight="17.0" prefWidth="174.0" text="owned games">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="20.0" layoutY="565.0" mnemonicParsing="false" onAction="#end" text="finish" />
+   </children>
+</AnchorPane>

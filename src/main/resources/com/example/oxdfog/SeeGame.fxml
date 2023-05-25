@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oxdfog.SeeGame">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="612.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@caboy.jpeg" />
+         </image>
+      </ImageView>
+      <Label fx:id="gameInfo" alignment="CENTER" layoutX="52.0" layoutY="45.0" prefHeight="214.0" prefWidth="516.0" textFill="#04fff2" wrapText="true">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button layoutX="466.0" layoutY="502.0" mnemonicParsing="false" onAction="#download" prefHeight="25.0" prefWidth="82.0" text="download" />
+      <Button layoutX="52.0" layoutY="502.0" mnemonicParsing="false" onAction="#back" style="-fx-: #2d68a6;" text="back" />
+   </children>
+</AnchorPane>
