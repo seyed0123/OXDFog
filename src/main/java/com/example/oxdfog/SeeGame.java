@@ -47,11 +47,13 @@ public class SeeGame implements Initializable {
                 baos.write(buffer, 0, bytesRead);
             }
             byte[] imageData = baos.toByteArray();
-            File imageFile = new File("G:\\code\\java\\OXDFog\\src\\main\\java\\com\\example\\oxdfog\\Downloads\\"+game.getFilePath());
+            File imageFile = new File("src/main/java/com/example/oxdfog/Downloads/"+game.getFilePath());
             FileOutputStream fos = new FileOutputStream(imageFile);
             BufferedOutputStream bos = new BufferedOutputStream(fos);
             bos.write(imageData, 0, imageData.length);
             bos.flush();
+            bos.close();
+            fos.close();
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }

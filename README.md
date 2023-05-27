@@ -40,6 +40,11 @@ Anyone who is younger than the minimum age required for a game cannot download t
 
 using a multithreading to handle multi clients.
 to handle this when a client sends a request to connect to the server ,the server made a new thread for it and then receives and sends the response to the client from this thread.
+these queries answer the question that was asked.
+`select count(*) from accounts;
+select avg(price) from games;
+select sum(download_count) from downloads where game_id='359550';
+select count(*) from downloads where game_id= '359550'`
 # screenshots of the app
 ![](screenShots/1.png)
 ![](screenShots/2.png)

@@ -71,28 +71,30 @@ public class Socket {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Socket socket = new Socket(1056);
         //socket.firstTime();
-       socket.start();
+        socket.start();
     }
-    public void start() {
+    public void start() throws IOException {
+        ServerSocket serverSocket = null;
         try {
-
-            ServerSocket serverSocket = new ServerSocket(1056);
-        System.out.println("Server started. Listening on port " + PORT);
+            serverSocket = new ServerSocket(1056);
+            System.out.println("Server started. Listening on port " + PORT);
 
         // Listen for incoming connections
-        while (true) {
-            java.net.Socket clientSocket = serverSocket.accept();
-
+            while (true) {
+                java.net.Socket clientSocket = serverSocket.accept();
             // Create a new thread to handle the client connection
-            Thread clientThread = new Thread(new Session(clientSocket));
-            clientThread.start();
-        }
+                Thread clientThread = new Thread(new Session(clientSocket));
+                clientThread.start();
+            }
         } catch (IOException e) {
         e.printStackTrace();
+        }
+        finally {
+            serverSocket.close();
         }
     }
 }
