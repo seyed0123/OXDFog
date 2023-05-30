@@ -1,0 +1,165 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 15.2 (Debian 15.2-1.pgdg110+1)
+-- Dumped by pg_dump version 15.2
+
+-- Started on 2023-05-30 12:32:48
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 215 (class 1259 OID 16489)
+-- Name: accounts; Type: TABLE; Schema: public; Owner: oxd
+--
+
+CREATE TABLE public.accounts (
+    id text NOT NULL,
+    username text,
+    password text,
+    age integer
+);
+
+
+ALTER TABLE public.accounts OWNER TO oxd;
+
+--
+-- TOC entry 216 (class 1259 OID 16496)
+-- Name: downloads; Type: TABLE; Schema: public; Owner: oxd
+--
+
+CREATE TABLE public.downloads (
+    account_id text,
+    game_id text,
+    download_count integer
+);
+
+
+ALTER TABLE public.downloads OWNER TO oxd;
+
+--
+-- TOC entry 214 (class 1259 OID 16477)
+-- Name: games; Type: TABLE; Schema: public; Owner: oxd
+--
+
+CREATE TABLE public.games (
+    id text NOT NULL,
+    title text,
+    developer text,
+    genre text,
+    price double precision,
+    release_year integer,
+    controller_support boolean,
+    reviews integer,
+    size integer,
+    file_path text,
+    minage integer
+);
+
+
+ALTER TABLE public.games OWNER TO oxd;
+
+--
+-- TOC entry 3332 (class 0 OID 16489)
+-- Dependencies: 215
+-- Data for Name: accounts; Type: TABLE DATA; Schema: public; Owner: oxd
+--
+
+COPY public.accounts (id, username, password, age) FROM stdin;
+4	arshia	$2a$10$TmBcKTLVnO6l3dFYcasScuQNR53nTjN1vrch4YxntSGXUGODS/ORS	12
+3	abol	$2a$10$.ysW1Ng7DpjfnHYLYgSV4ukFMasxzZQowYtM/MmHM3TEzaSm4tH1.	20
+\.
+
+
+--
+-- TOC entry 3333 (class 0 OID 16496)
+-- Dependencies: 216
+-- Data for Name: downloads; Type: TABLE DATA; Schema: public; Owner: oxd
+--
+
+COPY public.downloads (account_id, game_id, download_count) FROM stdin;
+3	359550	5
+3	1196590	2
+3	323190	2
+3	1245620	2
+3	292030	3
+3	1174180	4
+\.
+
+
+--
+-- TOC entry 3331 (class 0 OID 16477)
+-- Dependencies: 214
+-- Data for Name: games; Type: TABLE DATA; Schema: public; Owner: oxd
+--
+
+COPY public.games (id, title, developer, genre, price, release_year, controller_support, reviews, size, file_path, minage) FROM stdin;
+1085660	Destiny 2	Bungie	First-person Shooter	0	2019	t	74	657	1085660.png	15
+1151640	Horizon Zero Dawn Complete Edition	Guerrilla	Action-adventure	49.99	2020	t	87	915	1151640.png	15
+1174180	Red Dead Redemption 2	Rockstar Games	Action-adventure	59.99	2018	t	90	771	1174180.png	15
+1196590	Resident Evil Village	Capcom	Survival Horror	39.99	2021	t	95	811	1196590.png	15
+1245620	Elden Ring	FromSoftware	Role-playing	59.99	2022	t	94	703	1245620.png	15
+2050650	Resident Evil 4	Capcom	Survival Horror	59.99	2023	t	97	618	2050650.png	15
+292030	The Witcher 3: Wild Hunt	CD Project Red	Role-playing	29.99	2015	t	96	798	292030.png	15
+323190	Frostpunk	11 bit studios	Strategy	29.99	2018	f	91	944	323190.png	15
+359550	Tom Clancy Rainbow Six Siege	Ubisoft	First-person Shooter	19.99	2015	t	82	561	359550.png	15
+489830	The Elder Scrolls V: Skyrim Special Edition	Bethesda Game Studios	Role-playing	39.99	2016	t	96	677	489830.png	15
+\.
+
+
+--
+-- TOC entry 3186 (class 2606 OID 16495)
+-- Name: accounts accounts_pkey; Type: CONSTRAINT; Schema: public; Owner: oxd
+--
+
+ALTER TABLE ONLY public.accounts
+    ADD CONSTRAINT accounts_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3184 (class 2606 OID 16483)
+-- Name: games games_pkey; Type: CONSTRAINT; Schema: public; Owner: oxd
+--
+
+ALTER TABLE ONLY public.games
+    ADD CONSTRAINT games_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 3187 (class 2606 OID 16501)
+-- Name: downloads downloads_account_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: oxd
+--
+
+ALTER TABLE ONLY public.downloads
+    ADD CONSTRAINT downloads_account_id_fkey FOREIGN KEY (account_id) REFERENCES public.accounts(id);
+
+
+--
+-- TOC entry 3188 (class 2606 OID 16506)
+-- Name: downloads downloads_game_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: oxd
+--
+
+ALTER TABLE ONLY public.downloads
+    ADD CONSTRAINT downloads_game_id_fkey FOREIGN KEY (game_id) REFERENCES public.games(id);
+
+
+-- Completed on 2023-05-30 12:32:48
+
+--
+-- PostgreSQL database dump complete
+--
+

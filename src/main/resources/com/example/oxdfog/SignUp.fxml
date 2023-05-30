@@ -16,7 +16,7 @@
       <TextField fx:id="ageBar" layoutX="226.0" layoutY="138.0" promptText="age" />
       <PasswordField fx:id="passwordBar" layoutX="226.0" layoutY="97.0" promptText="password" />
       <Button fx:id="submit" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" onAction="#signUp" style="-fx-background-color: orange;" text="submit" />
-      <Label fx:id="idLabel" alignment="CENTER" layoutX="214.0" layoutY="249.0" prefHeight="90.0" prefWidth="176.0" wrapText="true">
+      <Label fx:id="idLabel" alignment="CENTER" layoutX="18.0" layoutY="249.0" prefHeight="90.0" prefWidth="565.0" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
          <font>
             <Font name="Bell MT Italic" size="34.0" />
          </font></Label>

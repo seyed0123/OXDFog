@@ -51,6 +51,8 @@ public class SignUp {
             out.flush();
             String id=in.readLine();
             idLabel.setText(id);
+            idLabel.setMaxWidth(100); // set the maximum width of the label
+            idLabel.setWrapText(true); // enable text wrapping
             user = new User(id,username,password,age);
             mainButton.setVisible(true);
         }catch (Exception p)
