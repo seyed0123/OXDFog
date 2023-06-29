@@ -6,6 +6,7 @@ module com.example.oxdfog {
     requires jackson.databind;
     requires org.json;
     requires com.google.gson;
+    requires javafx.media;
 
 
     opens com.example.oxdfog to javafx.fxml;
