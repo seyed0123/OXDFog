@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="612.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@caboy.jpeg" />
+            <Image url="@cowboy.jpeg" />
          </image>
       </ImageView>
       <Label fx:id="gameInfo" alignment="CENTER" layoutX="52.0" layoutY="45.0" prefHeight="214.0" prefWidth="516.0" textFill="#04fff2" wrapText="true">
